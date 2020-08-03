@@ -188,7 +188,7 @@
 <script>
 function please_sort_by(){
 a=document.getElementById("sort_by").value
-window.location.replace("http://localhost:8000?q="+a)
+window.open("/?q="+a,'_self')
 }
 function openmodal(a){
 $('#myModal').modal('toggle');
@@ -219,7 +219,7 @@ con.innerText="added"
 if (ids.length>=4){
 ids.push(id)
 
-window.open("http://localhost:8000/compare?q="+ids.join('k'),'_self')
+window.open("/compare?q="+ids.join('k'),'_self')
 
 
 }
@@ -236,8 +236,7 @@ ids.push(id)
 
 function exe_dup(){
 if(ids.length>1){
-window.open("http://localhost:8000/compare?q="+ids.join('k'),'_self')
-
+window.open("/compare?q="+ids.join('k'),'_self')
 
 
 }
